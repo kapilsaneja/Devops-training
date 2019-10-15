@@ -1,0 +1,6 @@
+---
+
+yum: installing nginx package
+name: nginx
+state: installed
+   
