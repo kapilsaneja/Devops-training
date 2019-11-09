@@ -1,1 +1,15 @@
-#yaml file for http playbook
+---
+ - hosts: webserver
+   remote_user: ec2-user
+   become_user: root
+   become: yes
+   vars:
+      web_name: sanbais2.example.com
+      web_dir: sanbais2
+      web_port: 80
+   
+   tasks:
+   - name: install httpd
+     yum: 
+      name: httpd
+      state: installed
