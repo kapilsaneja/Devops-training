@@ -13,3 +13,13 @@
      yum: 
       name: httpd
       state: installed
+      
+   - name: create /apps directory 
+     file: 
+      name: /apps/
+      state: directory
+      
+   -  name: Download or install the jdk
+      yum:
+        name: java-11-amazon-corretto
+        state: installed
